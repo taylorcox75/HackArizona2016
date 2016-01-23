@@ -1,10 +1,17 @@
 # HackArizona2016</br>
 
+
+To Run: 
+------------
+|npm install <br>
+|node server.js <br>
+|index.html *(launch)* <br> <br>
+
 Description:
 ------------
-A project involving a Parrot AR Drone 2.0
+TBD... <br>
 
-Last Years: https://github.com/taylorcox75/HackArizona2015
+
 
 Team:
 -----
