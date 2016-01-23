@@ -44,7 +44,7 @@ function counterClockwise(){
 	client.counterClockwise(0.75);
 }
 function clockwise(){
-	console.log("altUp");
+	console.log("clockwise");
 	client.clockwise(0.75);
 }
 function altUp(){

@@ -17,9 +17,10 @@
     "x264"
   ],
   "dependencies": {
-    "ws": "~0.4.27",
     "ar-drone": "0.2.0",
-    "buffy": "0.0.5"
+    "buffy": "0.0.5",
+    "keypress": "^0.2.1",
+    "ws": "~0.4.27"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
