@@ -9,8 +9,14 @@
   "main": "index",
   "dependencies": {
     "ar-drone": "0.2.0",
+    "bootstrap": "^3.3.6",
     "buffy": "0.0.5",
+    "gulp": "^3.9.0",
+    "gulp-install": "^0.6.0",
+    "gulp-shell": "^0.5.1",
     "keypress": "^0.2.1",
+    "nodemon": "^1.8.1",
+    "video.js": "^5.4.6",
     "ws": "~0.4.27"
   },
   "devDependencies": {
@@ -26,5 +32,6 @@
       "name": "nachoDrone"
     }
   ],
-  "license": "BSD"
+  "license": "MIT",
+  "gitHead": "657213a52d5e9c19b85df6a42f76341a98c08ae8"
 }

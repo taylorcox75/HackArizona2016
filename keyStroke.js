@@ -19,8 +19,8 @@ client._ref.fly = false;
 process.stdin.on('keypress', function (ch, key) {
     // console.log('got "keypress"', key);
     if (key.name === 'space' && client._ref.fly) {
-        console.log('Client Landed');
         client.land();
+                console.log('Client Landed');
         console.log("Battery: " + client._lastBattery);
     } else if (key.name === 'space') {
         console.log('Spinning Up!');
@@ -65,7 +65,7 @@ process.stdin.on('keypress', function (ch, key) {
         console.log("Battery: " + client._lastBattery);
         client.stop();
     } else if (key.name == 'x') {
-        //console.log("Altitude: " + client._lastAltitude);
+        console.log("Stopped!");
         client.stop();
     }
     //This was used to make the input not infinitely execute, but caused to much of a lag
