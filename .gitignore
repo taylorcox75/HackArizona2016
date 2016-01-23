@@ -3,7 +3,7 @@
 /bin/
 bin/
 target/
-node_modules
+node_modules/
  
 # OS Files #
 .DS_Store

@@ -1,3 +1,9 @@
+var arDrone = require('ar-drone');
+
+var client  = arDrone.createClient();
+client.createRepl();
+//client.takeoff();
+
 var keypress = require('keypress');
 
 // make `process.stdin` begin emitting "keypress" events
@@ -6,9 +12,10 @@ keypress(process.stdin);
 // listen for the "keypress" event
 
 process.stdin.on('keypress', function (ch, key) {
-  console.log('got "keypress"', key);
+  //console.log('got "keypress"', key);
   if(key.name === 'up'){
   	up();
+	  console.log('\n$ ')
   }else if(key.name === 'left'){
   	left();
   }else if(key.name === 'down'){
@@ -36,43 +43,43 @@ process.stdin.on('keypress', function (ch, key) {
 });
 
 function takeOff(){
-	console.log("takeOff");
-	client.takeoff(1);
+	console.log("\ntakeOff");
+	client.takeoff();
 }
 function counterClockwise(){
-	console.log("counterClockwise");
+	console.log("\ncounterClockwise");
 	client.counterClockwise(0.75);
 }
 function clockwise(){
-	console.log("clockwise");
+	console.log("\nclockwise");
 	client.clockwise(0.75);
 }
 function altUp(){
-	console.log("altUp");
+	console.log("\naltUp");
 	client.up(0.75);
 }
 function altDown(){
-	console.log("altDown");
+	console.log("\naltDown");
 	client.down(0.75);
 }
 function space(){
-	console.log("land");
+	console.log("\nland");
 	client.land();
 }
 function up(){
-	console.log("forward");
+	console.log("\nforward");
 	client.front(1)
 }
 function left(){
-	console.log("left");
+	console.log("\nleft");
 	client.left(0.75)
 }
 function down(){
-	console.log("down");
+	console.log("\ndown");
 	client.back(1)
 }
 function right(){
-	console.log("right");
+	console.log("\nright");
 	client.right(0.75)
 
 }
