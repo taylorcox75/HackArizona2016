@@ -27,12 +27,18 @@ process.stdin.on('keypress', function (ch, key) {
       counterClockwise();
   }else if(key.name === 'd'){
       clockwise();
+  }else if(key.name === 't'){
+      takeOff();
   }
   if (key && key.ctrl && key.name == 'c') {
     process.stdin.pause();
   }
 });
 
+function takeOff(){
+	console.log("takeOff");
+	client.takeoff(1);
+}
 function counterClockwise(){
 	console.log("counterClockwise");
 	client.counterClockwise(0.75);
