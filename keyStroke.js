@@ -15,35 +15,35 @@ keypress(process.stdin);
 process.stdin.on('keypress', function (ch, key) {
     //console.log('got "keypress"', key);
     if (key.name === 't') {
-        client.takeoff();
-        console.log('\nClient Took Off\nEnter a Command:')
+        console.log('\nClient Took Off')//\nEnter a Command:')
+        client.takeoff()
     } else if (key.name === 'space') {
-        client.land();
-        console.log('\nClient Landed\nEnter a Command:')
+        console.log('\nClient Landed')//\nEnter a Command:')
+        client.land()
     } else if (key.name === 'w') {
-        altUp();
-        console.log('\nGoing Up!\nEnter a Command:')
+        console.log('\nGoing Up!')//\nEnter a Command:')
+        client.up(1)
     } else if (key.name === 's') {
-        altDown();
-        console.log('\nGoing Down!\nEnter a Command:')
+        console.log('\nGoing Down!')//\nEnter a Command:')
+        client.down(1)
     } else if (key.name === 'a') {
-        counterClockwise();
-        console.log('\nRotating CounterCW\nEnter a Command:')
+        console.log('\nRotating CCW')//\nEnter a Command:')
+        client.counterClockwise(1)
     } else if (key.name === 'd') {
-        clockwise();
-        console.log('\nRotating ClockWise\nEnter a Command:')
+        console.log('\nRotating CW')//\nEnter a Command:')
+        client.clockwise(1)
     } else if (key.name === 'up') {
         console.log('\nGoing Forward')//\nEnter a Command:')
-        up();
+        client.front(1)
     } else if (key.name === 'down') {
         console.log('\nGoing Backwards')//\nEnter a Command:')
-        down();
+        client.back(1)
     } else if (key.name === 'left') {
         console.log('\nTo The Left <-')//\nEnter a Command:')
-        left();
+        client.left(1)
     } else if (key.name === 'right') {
         console.log('\nTo The Right ->')//\nEnter a Command:')
-        right();
+        client.right(1)
     }
     // This timesout the drone wanting to keep moving after the button is released
     setTimeout(function () {
@@ -58,7 +58,7 @@ function takeOff() {
 }
 function counterClockwise() {
     console.log("\ncounterClockwise");
-    client.counterClockwise(0.75);
+
 }
 function clockwise() {
     console.log("\nclockwise");
