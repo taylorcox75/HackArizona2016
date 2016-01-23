@@ -15,7 +15,7 @@ process.stdin.on('keypress', function (ch, key) {
   //console.log('got "keypress"', key);
   if(key.name === 'up'){
   	up();
-	  console.log('\n$ ')
+	  console.log('Enter Command:')
   }else if(key.name === 'left'){
   	left();
   }else if(key.name === 'down'){
