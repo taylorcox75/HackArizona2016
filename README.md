@@ -9,7 +9,7 @@ To Run:
 
 Description:
 ------------
-TBD... <br>
+A racing inspired drone game where players view the drone’s feed through either virtual reality in Google Cardboard or on a PC.
 
 
 
