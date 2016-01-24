@@ -1,6 +1,6 @@
 var gulp = require('gulp');
 var install = require("gulp-install");
-var shell = require('gulp-shell');
+//var shell = require('gulp-shell');
 var nodemon = require('nodemon');
 
 
@@ -12,15 +12,12 @@ gulp.task('build', function (callback) {
     callback();
 });
 
-gulp.task('run', ['build'], function () {
-    nodemon({
-        script: 'server.js',
-        ext: 'js html',
-        env: { 'NODE_ENV': 'development' }
-    });
-});
+var exec = require('child_process').exec;
 
-gulp.task('createDocs', shell.task([
-    'rm -rf out',
-    './node_modules/.bin/jsdoc server/ -t ./node_modules/ink-docstrap/template -c ./conf.json'
-]));
+gulp.task('run', function (cb) {
+    exec('node server.js', function (err, stdout, stderr) {
+        console.log(stdout);
+        console.log(stderr);
+        cb(err);
+    });
+})
