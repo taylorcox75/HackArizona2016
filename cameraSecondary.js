@@ -1,4 +1,4 @@
-var drone = require("./lib/server"),
+var drone = require("./stream_dep/lib/server"),
  http = require("http");
 
 

@@ -1,4 +1,4 @@
-var drone = require("./lib/server"),
+var drone = require("./stream_dep/lib/server"),
     http = require("http"),
     arDrone = require('ar-drone'),
     keypress = require('keypress');
@@ -62,10 +62,7 @@ process.stdin.on('keypress', function (ch, key) {
     } else if (key.name === 'right') {
         console.log('To The Right ->');
         client.right(1)
-    } else if (key && key.ctrl && key.name == 'c') {
-        console.log('EMERGENCY LANDING');
-        client.land();
-    } else if (key.name == 'o') {
+    }  else if (key.name == 'o') {
         console.log('Flip Left');
         client.animate('flipLeft', 1000);
         client.stop();
